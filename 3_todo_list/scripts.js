@@ -33,12 +33,14 @@ const todosApp = {
   },
 
   // Lifecycle Hooks
-  beforeCreate() {
-    console.log(this.newTodo);
-  },
+  //   beforeCreate() {
+  //     console.log(this.newTodo);
+  //   },
 
   created() {
-    console.log(this.newTodo);
+    this.todos = localStorage.getItem("vue_todos")
+      ? JSON.parse(localStorage.getItem("vue_todos"))
+      : this.todos;
   },
 
   //   beforeUpdate() {
