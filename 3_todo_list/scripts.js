@@ -30,6 +30,10 @@ const todosApp = {
         alert("To-do test is required");
       }
     },
+
+    storeTodos() {
+      localStorage.setItem("vue_todos", JSON.stringify(this.todos));
+    },
   },
 
   // Lifecycle Hooks
@@ -42,6 +46,10 @@ const todosApp = {
       ? JSON.parse(localStorage.getItem("vue_todos"))
       : this.todos;
   },
+
+  //   updated() {
+  //     localStorage.setItem("vue_todos", JSON.stringify(this.todos));
+  //   },
 
   //   beforeUpdate() {
   //     console.log("Before update");
