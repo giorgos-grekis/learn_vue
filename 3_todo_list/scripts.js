@@ -24,6 +24,9 @@ const todosApp = {
       if (this.newTodo.text) {
         this.todos.push(this.newTodo);
         this.newTodo = { done: false };
+
+        localStorage.setItem("vue_todos", JSON.stringify(this.todos))
+
       } else {
         alert("To-do test is required")
       }
