@@ -1,30 +1,40 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// https://opentdb.com/api.php?amount=1&category=18
+
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <h1>
+      Microphones can be used not only to pick up sound, but also to project sound similar to a speaker.
+    </h1>
+
+    <input id="inputOptionTrue" type="radio" name="options" value="True" />
+    <label for="inputOptionTrue">True</label>
+    <br />
+
+    <input id="inputOptionFalse" type="radio" name="options" value="False" />
+    <label for="inputOptionFalse">False</label>
+    <br />
+
+    <button class="send" type="button">Send</button>
+
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style scoped lang="scss">
+input[type=radio] {
+  margin: 12px 4px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+button.send {
+  margin-top: 12px;
+  height: 40px;
+  min-width: 120px;
+  padding: 0 16px;
+  color: #fff;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
 }
 </style>

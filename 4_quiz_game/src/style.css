@@ -3,14 +3,16 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --main-color: #1867c0;
 }
 
 a {
@@ -61,8 +63,11 @@ button:focus-visible {
 #app {
   max-width: 1280px;
   margin: 0 auto;
+  margin-top: 60px;
   padding: 2rem;
   text-align: center;
+  color: #2c3e50;
+  /* max-width: 960px; */
 }
 
 @media (prefers-color-scheme: light) {
